@@ -1,16 +1,34 @@
-Serverless Data Ingestion Service
-
-<p align="center"> <b>Cloud Native • Serverless • Scalable • Clean Architecture</b> </p> <p align="center"> <img src="https://img.shields.io/badge/Python-3.x-blue" /> <img src="https://img.shields.io/badge/FastAPI-Framework-green" /> <img src="https://img.shields.io/badge/AWS-Lambda-orange" /> <img src="https://img.shields.io/badge/Database-DynamoDB-blue" /> <img src="https://img.shields.io/badge/License-MIT-lightgrey" /> </p>
+<p align="center"> <img src="https://readme-typing-svg.demolab.com?font=Fira+Code\&size=22\&pause=1000\&color=36BCF7\&center=true\&vCenter=true\&width=600\&lines=Serverless+Data+Ingestion+Service;Built+with+FastAPI+%2B+AWS+Lambda;Clean+Architecture+%7C+Cloud+Native;Scalable+%7C+Modular+%7C+Production+Ready" /> </p> <p align="center"> <img src="https://img.shields.io/badge/Python-3.x-3776AB?logo=python\&logoColor=white"/> <img src="https://img.shields.io/badge/FastAPI-0.100+-009688?logo=fastapi\&logoColor=white"/> <img src="https://img.shields.io/badge/AWS-Lambda-FF9900?logo=amazonaws\&logoColor=white"/> <img src="https://img.shields.io/badge/DynamoDB-NoSQL-4053D6?logo=amazondynamodb\&logoColor=white"/> <img src="https://img.shields.io/badge/License-MIT-black"/> </p>
 
 Overview
 
 
 
-A lightweight serverless data ingestion API built with FastAPI, AWS Lambda, and DynamoDB.
+A cloud native, serverless data ingestion API built using FastAPI and AWS Lambda.
 
 
 
-This project demonstrates clean backend architecture with a layered design:
+This project demonstrates:
+
+
+
+Clean layered backend architecture
+
+
+
+Serverless deployment model
+
+
+
+Scalable NoSQL persistence
+
+
+
+Modular and maintainable Python design
+
+
+
+Architecture flow:
 
 
 
@@ -18,9 +36,57 @@ API → Service → Processor → Storage
 
 
 
-Designed for scalability, maintainability, and minimal operational overhead.
+Architecture Diagram
 
+&nbsp;               ┌───────────────┐
 
+&nbsp;               │   Client/API  │
+
+&nbsp;               └───────┬───────┘
+
+&nbsp;                       │
+
+&nbsp;                       ▼
+
+&nbsp;               ┌───────────────┐
+
+&nbsp;               │   FastAPI     │
+
+&nbsp;               │   (Routes)    │
+
+&nbsp;               └───────┬───────┘
+
+&nbsp;                       │
+
+&nbsp;                       ▼
+
+&nbsp;               ┌───────────────┐
+
+&nbsp;               │  Service      │
+
+&nbsp;               │  Layer        │
+
+&nbsp;               └───────┬───────┘
+
+&nbsp;                       │
+
+&nbsp;                       ▼
+
+&nbsp;               ┌───────────────┐
+
+&nbsp;               │  Processor    │
+
+&nbsp;               └───────┬───────┘
+
+&nbsp;                       │
+
+&nbsp;                       ▼
+
+&nbsp;               ┌───────────────┐
+
+&nbsp;               │  DynamoDB     │
+
+&nbsp;               └───────────────┘
 
 Project Structure
 
@@ -28,47 +94,47 @@ data\_ingestion/
 
 │
 
-├── lambda\_handler.py        # AWS Lambda entry point
+├── lambda\_handler.py
 
 │
 
 ├── api/
 
-│   └── routes.py            # FastAPI route definitions
+│   └── routes.py
 
 │
 
 ├── core/
 
-│   └── config.py            # Configuration management
+│   └── config.py
 
 │
 
 ├── models/
 
-│   ├── request.py           # Request schemas
+│   ├── request.py
 
-│   └── response.py          # Response schemas
+│   └── response.py
 
 │
 
 ├── services/
 
-│   ├── ingestion\_service.py # Business logic layer
+│   ├── ingestion\_service.py
 
-│   └── query\_service.py     # Query logic
+│   └── query\_service.py
 
 │
 
 ├── processors/
 
-│   └── file\_processor.py    # Data transformation logic
+│   └── file\_processor.py
 
 │
 
 ├── storage/
 
-│   └── dynamodb.py          # DynamoDB integration layer
+│   └── dynamodb.py
 
 │
 
@@ -76,7 +142,7 @@ data\_ingestion/
 
 Getting Started
 
-<details> <summary><b>Clone and Setup</b></summary>
+<details> <summary><strong>Clone and Setup</strong></summary>
 
 git clone https://github.com/your-username/your-repo.git
 
@@ -90,13 +156,13 @@ pip install -r requirements.txt
 
 </details>
 
-<details> <summary><b>Run Locally</b></summary>
+<details> <summary><strong>Run Locally</strong></summary>
 
 uvicorn api.routes:app --reload
 
 
 
-Open your browser:
+Open:
 
 
 
@@ -110,11 +176,11 @@ Deployment
 
 
 
-This service is built for AWS Lambda.
+Designed for AWS Lambda.
 
 
 
-Lambda handler:
+Handler:
 
 
 
@@ -122,7 +188,7 @@ lambda\_handler.lambda\_handler
 
 
 
-You can deploy using:
+Deploy using:
 
 
 
@@ -142,31 +208,31 @@ Manual ZIP deployment
 
 
 
-Architecture Principles
+Key Design Principles
 
 
 
-Clean separation of concerns
+Separation of concerns
 
 
 
-Serverless first approach
+Modular architecture
 
 
 
-Modular design
+Serverless first design
 
 
 
-DynamoDB backed persistence
+Clean integration with DynamoDB
 
 
 
-Easily extensible
+Easy extensibility
 
 
 
-Future Improvements
+Roadmap
 
 
 
@@ -174,11 +240,11 @@ Structured logging
 
 
 
-Idempotency support
-
-
-
 Observability and tracing
+
+
+
+Idempotency support
 
 
 
@@ -186,7 +252,39 @@ Retry handling strategy
 
 
 
-CI/CD pipeline
+CI/CD automation
+
+
+
+Performance benchmarking
+
+
+
+Contributing
+
+
+
+Contributions are welcome.
+
+
+
+If you would like to improve the project:
+
+
+
+Fork the repository
+
+
+
+Create a feature branch
+
+
+
+Commit your changes
+
+
+
+Open a pull request
 
 
 
@@ -194,5 +292,9 @@ License
 
 
 
-Licensed under the MIT License.
+MIT License
+
+
+
+You are free to use, modify, and distribute this software.
 
