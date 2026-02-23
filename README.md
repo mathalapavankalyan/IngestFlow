@@ -70,9 +70,13 @@ Getting Started
 Clone and Setup : 
 
  >> git clone https://github.com/mathalapavankalyan/IngestFlow.git
- >> cd your-repo
+
+ >> cd ingestflow
+
  >> python -m venv venv
+
  >> source venv/bin/activate
+
  >> pip install -r requirements.txt
 
 Run Locally :
