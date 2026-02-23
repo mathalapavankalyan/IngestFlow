@@ -69,7 +69,7 @@ Getting Started
 
 Clone and Setup : 
 
- >> git clone [https://github.com/your-username/your-repo.git](https://github.com/mathalapavankalyan/IngestFlow.git)
+ >> git clone https://github.com/mathalapavankalyan/IngestFlow.git
  >> cd your-repo
  >> python -m venv venv
  >> source venv/bin/activate
